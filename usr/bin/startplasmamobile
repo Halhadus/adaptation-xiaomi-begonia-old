@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# SPDX-FileCopyrightText: 2019-2021 Aleix Pol <apol@kde.org>
+# SPDX-FileCopyrightText: 2019-2021 Bhushan Shah <bshah@kde.org>
+# SPDX-FileCopyrightText: 2019-2020 Jonah Brüchert <jbb@kaidan.im>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+#[ -f /etc/profile ] && . /etc/profile
+
+#export QT_QPA_PLATFORM=wayland
+#export QT_QPA_PLATFORMTHEME=KDE
+#export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+#export EGL_PLATFORM=wayland
+#export KWIN_COMPOSE=O2ES
+#export EGL_PLATFORM=hwcomposer
+
+#export QT_QUICK_CONTROLS_STYLE=org.kde.breeze
+#export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
+export QT_QUICK_CONTROLS_MOBILE=true
+export PLASMA_INTEGRATION_USE_PORTAL=1
+export PLASMA_PLATFORM=phone:handset
+
+# if coredumpd knows about the dumps, make sure drkonqi catches them
+#if [[ $(cat /proc/sys/kernel/core_pattern) =~ /systemd-coredump ]]
+#then
+#  export KDE_COREDUMP_NOTIFY=1
+#fi
+
+# TODO port away from PLASMA_DEFAULT_SHELL into QT_QPA_PLATFORM=offscreen plasma-apply-lookandfeel --apply org.kde.plasma.phone
+export PLASMA_DEFAULT_SHELL=org.kde.plasma.phoneshell
+#startplasma-wayland --inputmethod maliit-keyboard --exit-with-session=/usr/lib/aarch64-linux-gnu/libexec/startplasma-waylandsession
+startplasma-wayland
