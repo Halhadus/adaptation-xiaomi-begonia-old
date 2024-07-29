@@ -7,11 +7,11 @@ usermod -aG bluetooth droidian
 groupadd --gid 1003 android_graphics
 usermod -aG android_graphics droidian
 
-groupadd --gid 1004 input
-usermod -aG input droidian
+groupadd --gid 1004 android_input
+usermod -aG android_input droidian
 
-groupadd --gid 1005 audio
-usermod -aG audio droidian
+groupadd --gid 1005 android_audio
+usermod -aG android_audio droidian
 
 groupadd --gid 1006 camera
 usermod -aG camera droidian
