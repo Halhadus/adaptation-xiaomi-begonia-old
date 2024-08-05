@@ -33,10 +33,10 @@ while True:
                 elif not still_pressed_old:
                     if locked:
                         print("Unlocking the screen")
-                        os.system(f"echo {brightness} > /sys/class/leds/lcd-backlight/brightness")
+                        os.system(f"echo {brightness} | tee /sys/class/leds/lcd-backlight/brightness")
                         locked = False
                     else:
                         brightness_old = brightness
                         print("Locking the screen")
-                        os.system("echo 0 > /sys/class/leds/lcd-backlight/brightness")
+                        os.system("echo 0 | tee /sys/class/leds/lcd-backlight/brightness")
                         locked = True
