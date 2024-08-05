@@ -13,6 +13,10 @@ apt install plasma-mobile systemsettings maliit-keyboard qmlkonsole libbatman-wr
 umount /run
 rm -rf /tmp/run
 
+# Pbhelper setup
+groupadd --gid 1453 pbhelper
+useradd -r -g pbhelper -u 1453 -s /bin/true pbhelper
+
 # Fix touchscreen step 1
 /sbin/setcap cap_dac_read_search+ep /usr/bin/startplasma-wayland
 /sbin/setcap cap_dac_read_search+ep /usr/bin/kwin_wayland
