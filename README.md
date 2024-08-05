@@ -1,4 +1,4 @@
-# xiaomi-begonia Adaptation Files for Droidian:
+# xiaomi-begonia Adaptation Files for Droidian Plasma:
 
 ## What's works
 
@@ -10,7 +10,7 @@ droidian-camera or pinhole not working.
 
 * Brightness control: ✔
 
-* Rotation: ✔
+* Rotation: ❌
 
 * Fingerprint: ? (temporary disabled)
 
