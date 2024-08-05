@@ -9,7 +9,7 @@ mkdir -p /tmp/run/systemd/resolve
 echo "nameserver 9.9.9.11" > /tmp/run/systemd/resolve/stub-resolv.conf
 mount --bind /tmp/run /run
 apt update
-apt install plasma-mobile systemsettings maliit-keyboard qmlkonsole libbatman-wrappers python3-evdev -y
+apt install plasma-mobile systemsettings maliit-keyboard qmlkonsole python3-evdev -y
 umount /run
 rm -rf /tmp/run
 
