@@ -16,6 +16,7 @@ rm -rf /tmp/run
 # Pbhelper setup
 groupadd -rg 571 pbhelper
 useradd -rg pbhelper -u 571 -s /bin/true pbhelper
+chmod 755 /usr/bin/pbhelper
 
 # Fix touchscreen step 1
 /sbin/setcap cap_dac_read_search+ep /usr/bin/startplasma-wayland
