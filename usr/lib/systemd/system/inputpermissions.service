@@ -5,7 +5,7 @@ Before=phosh.service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c 'chmod -R 777 /dev/input /dev/uinput /dev/uhid; chmod 070 /dev/input/event1; chown pbhelper:pbhelper /dev/input/event1; chmod 070 /sys/class/input/event1; chown pbhelper:pbhelper /sys/class/input/event1'
+ExecStart=/bin/sh -c 'chmod -R 777 /dev/input /dev/uinput /dev/uhid; chmod 070 /dev/input/event1; chown pbhelper:pbhelper /dev/input/event1; chmod 070 /sys/class/input/event1; chown pbhelper:pbhelper /sys/class/input/event1; chmod 777 /sys/class/leds/lcd-backlight/brightness'
 
 [Install]
 WantedBy=multi-user.target
