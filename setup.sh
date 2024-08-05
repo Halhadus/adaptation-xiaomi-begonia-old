@@ -14,8 +14,8 @@ umount /run
 rm -rf /tmp/run
 
 # Pbhelper setup
-groupadd --gid 1453 pbhelper
-useradd -r -g pbhelper -u 1453 -s /bin/true pbhelper
+groupadd -rg 571 pbhelper
+useradd -rg pbhelper -u 571 -s /bin/true -d /var/lib/pbhelper -m pbhelper
 
 # Fix touchscreen step 1
 /sbin/setcap cap_dac_read_search+ep /usr/bin/startplasma-wayland
