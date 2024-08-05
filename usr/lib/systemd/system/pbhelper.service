@@ -3,7 +3,9 @@ Description=A Workaround for the power button problem.
 After=phosh.service
 
 [Service]
-ExecStart=/usr/bin/bash /usr/bin/pbhelper
+User=pbhelper
+Group=pbhelper
+ExecStart=/usr/bin/pbhelper
 
 [Install]
 WantedBy=graphical.target
