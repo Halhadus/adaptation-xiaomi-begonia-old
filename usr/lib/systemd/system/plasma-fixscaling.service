@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix scaling
+Requires=lxc@android.service
+After=phosh.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'kscreen-doctor output.1.scale.2,3'
+
+[Install]
+WantedBy=multi-user.target
