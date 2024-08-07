@@ -28,5 +28,5 @@ cp -rf /adaptation-xiaomi-begonia/* /
 cp -rf /adaptation-xiaomi-begonia/etc/environment.d/environment /etc/environment
 rm /etc/ofono/ril_subscription.conf
 systemctl disable droidian-fpd batman
-systemctl enable inputpermissions modules ssh-fix pbhelper droidian-perf brightness
+systemctl enable inputpermissions modules ssh-fix pbhelper droidian-perf brightness plasma-fixscaling
 bash /adaptation-xiaomi-begonia/groups.sh
