@@ -8,6 +8,7 @@ dev = evdev.InputDevice('/dev/input/event1')
 brightness_old = 2047
 still_pressed_old = False
 while True:
+    time.sleep(0.1)
     with open("/sys/class/leds/lcd-backlight/brightness", "r") as f:
         brightness = f.read().strip()
     if str(brightness) == "0":
