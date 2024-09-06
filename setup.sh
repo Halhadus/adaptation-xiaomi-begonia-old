@@ -5,7 +5,7 @@ mkdir -p /tmp/run/systemd/resolve
 echo "nameserver 9.9.9.11" > /tmp/run/systemd/resolve/stub-resolv.conf
 mount --bind /tmp/run /run
 apt update
-apt python3-evdev adaptation-hybris-api29-phone-dual-sim -y
+apt install python3-evdev adaptation-hybris-api29-phone-dual-sim -y
 umount /run
 rm -rf /tmp/run
 
